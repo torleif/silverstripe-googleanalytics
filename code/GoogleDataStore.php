@@ -5,6 +5,8 @@ class GoogleDataStore extends Object {
 	protected $labels = array(
 		'visits' => 'Visits',
 		'pageviews' => 'Page Views',
+		'entranceBounceRate' => 'Entrance Bounce Rate',
+		'bounces' => 'Bounces',
 	);
 	
 	// Credentials to connect to Google Analytics
@@ -54,7 +56,7 @@ class GoogleDataStore extends Object {
 	 **/
 	public function fetchData($query) {
 		
-		require_once('../googleanalytics/thirdparty/analytics_api.php');
+		require_once('../mysite/googleanalytics/thirdparty/analytics_api.php');
 		
 		// prep query params
 		$query = array_merge($this->query, $query);

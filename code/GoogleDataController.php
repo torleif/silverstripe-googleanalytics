@@ -34,7 +34,7 @@ class GoogleDataController extends Controller {
 		
 		$data = $store->fetchPerformance(array(
 			'dimensions' => 'ga:date',
-			'metrics' => 'ga:visits,ga:pageviews',
+			'metrics' => 'ga:visits,ga:pageviews,ga:entranceBounceRate,ga:bounces',
 			'sort' => '-ga:date',
 			'filters' => $filters,
 		));

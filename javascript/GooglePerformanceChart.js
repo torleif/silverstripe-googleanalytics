@@ -18,7 +18,9 @@
 
 			datasets = {
 				"visits": { label: "Visits" },
-				"pageviews": { label: "Page Views" }
+				"pageviews": { label: "Page Views" },
+				"entranceBounceRate": { label: "Entrance Bounce Rate" },
+				"bounces": { label: "bounces" }
 		    };
 
 			options = {
@@ -67,6 +69,11 @@
 
 				plotAccordingToChoices();
 			});
+                        choiceContainer.ready(function(){
+                            console.log();
+                            //$('#choices input').trigger('click');
+                            $('#choices input:first-child').trigger('click');
+                        });
 			
 			$("#GooglePerformanceChart").bind("plothover", function (event, pos, item) {
 
